@@ -2,4 +2,5 @@
 
 set -x
 
-echo goodbye > hello.txt
+sudo apt update
+sudo apt -y install qemu-system-arm qemu-efi-aarch64 qemu-utils
