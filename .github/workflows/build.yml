@@ -31,4 +31,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: archlinux.qcow2
-          path: archlinux.qcow2
+          path: alarm/archlinux.qcow2
