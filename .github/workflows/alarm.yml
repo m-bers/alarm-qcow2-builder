@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo hello > hello.txt
+        run: script.sh
       - uses: actions/upload-artifact@v2
         with:
           name: hello
