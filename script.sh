@@ -2,4 +2,4 @@
 
 set -x
 
-echo hello > hello.txt
+echo goodbye > hello.txt
