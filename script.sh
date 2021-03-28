@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Hello World" > /hello.txt
+sudo echo "Hello World" > /hello.txt
