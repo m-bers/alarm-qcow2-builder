@@ -2,5 +2,5 @@
 
 set -x
 
-touch hello.txt
-echo "Hello World" > hello.txt
+touch $GITHUB_WORKSPACE/hello.txt
+echo "Hello World" > $GITHUB_WORKSPACE/hello.txt
