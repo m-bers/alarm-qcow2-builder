@@ -8,6 +8,6 @@ mkdir alarm
 cd alarm
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 qemu-img create archlinux.img 32GB
-echo -e "g\nn\n\n\n+200M\nt\n1\nn\n\n\nw\n" | fdisk $DISK
+echo -e "g\nn\n\n\n+200M\nt\n1\nn\n\n\nw\n" | fdisk archlinux.img
 sudo kpartx -av archlinux.img
 ls /dev/mapper
