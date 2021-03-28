@@ -9,5 +9,6 @@ cd alarm
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 qemu-img create archlinux.img 32G
 echo -e "g\nn\n\n\n+200M\nt\n1\nn\n\n\n\nw\n" | fdisk archlinux.img
-sudo kpartx -av archlinux.img
-ls /dev/mapper
+read -r -d '\n' ARCHBOOT ARCHROOT <<<$(sudo kpartx -av archlinux.img | grep -oh "\w*loop\w*")
+echo "ARCHBOOT=$ARCHBOOT"
+echo "ARCHROOT=$ARCHROOT"
