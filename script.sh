@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo echo "Hello World" > /hello.txt
+sudo apt update
