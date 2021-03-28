@@ -16,3 +16,10 @@ BOOTUUID=$(blkid $ARCHBOOT -o value -s UUID)
 ROOTUUID=$(blkid $ARCHROOT -o value -s UUID)
 echo "BOOTUUID=$BOOTUUID"
 echo "ROOTUUID=$ROOTUUID"
+echo "/dev/disk/by-uuid/$ROOTUUID / ext4 defaults 0 0\n/dev/disk/by-uuid/$BOOTUUID /boot vfat defaults 0 0" >> root/etc/fstab
+echo "Image root=UUID=$ROOTUUID rw initrd=\initramfs-linux.img" >> root/boot/startup.nsh
+umount root/boot
+umount root
+kpartx -d archlinux.img
+sync
+exit

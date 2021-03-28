@@ -9,3 +9,4 @@ cd alarm
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 qemu-img create archlinux.img 32G
 sudo $GITHUB_WORKSPACE/sudoscript.sh
+qemu-img convert -O qcow2 archlinux.img archlinux.qcow2
