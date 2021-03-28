@@ -27,8 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: $GITHUB_WORKSPACE/script.sh
+        run: echo hello > hello.txt
       - uses: actions/upload-artifact@v2
         with:
           name: hello
-          path: $GITHUB_WORKSPACE/hello.txt
+          path: hello.txt
