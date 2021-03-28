@@ -6,11 +6,11 @@ sudo apt update
 sudo apt -y install qemu-system-arm qemu-efi-aarch64 qemu-utils fdisk kpartx libarchive-tools wget bzip2
 mkdir alarm
 cd alarm
-wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
+wget -qq http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 qemu-img create archlinux.img 32G
 sudo $GITHUB_WORKSPACE/sudoscript.sh
 qemu-img convert -O qcow2 archlinux.img archlinux.qcow2
-wget https://github.com/qemu/qemu/raw/master/pc-bios/edk2-aarch64-code.fd.bz2
+wget -qq https://github.com/qemu/qemu/raw/master/pc-bios/edk2-aarch64-code.fd.bz2
 bzip2 -d edk2-aarch64-code.fd.bz2
 dd if=/dev/zero conv=sync bs=1M count=64 of=ovmf_vars.fd
 qemu-system-aarch64 -L ~/bin/qemu/share/qemu \
