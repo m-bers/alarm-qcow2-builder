@@ -17,7 +17,7 @@ qemu-system-aarch64 -L ~/bin/qemu/share/qemu \
 	-smp 8 \
 	-machine virt,accel=hvf,highmem=off \
 	-cpu cortex-a72 -m 4096 \
-	-drive file=edk2-aarch64-code.fd,if=pflash,format=raw,readonly=on \ \
+	-drive file=edk2-aarch64-code.fd,if=pflash,format=raw,readonly=on \
 	-drive file=ovmf_vars.fd,if=pflash,format=raw \
 	-drive "if=virtio,media=disk,id=drive2,file=archlinux.qcow2,cache=writethrough,format=qcow2" \
 	-nic user,model=virtio-net-pci,hostfwd=tcp::50022-:22 -nographic \
