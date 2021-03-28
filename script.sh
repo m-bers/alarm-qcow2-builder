@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo apt update
+sudo touch /hello.txt
+sudo echo "Hello World" > /hello.txt
