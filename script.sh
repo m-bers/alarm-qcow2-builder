@@ -15,7 +15,6 @@ bzip2 -d edk2-aarch64-code.fd.bz2
 dd if=/dev/zero conv=sync bs=1M count=64 of=ovmf_vars.fd
 qemu-system-aarch64 -L ~/bin/qemu/share/qemu \
 	-smp 8 \
-	-machine virt,accel=qemu,highmem=off \
 	-cpu cortex-a72 -m 4096 \
 	-drive file=edk2-aarch64-code.fd,if=pflash,format=raw,readonly=on \
 	-drive file=ovmf_vars.fd,if=pflash,format=raw \
