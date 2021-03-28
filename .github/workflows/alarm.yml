@@ -31,4 +31,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: hello
-          path: /hello.txt
+          path: $GITHUB_WORKSPACE/hello.txt
